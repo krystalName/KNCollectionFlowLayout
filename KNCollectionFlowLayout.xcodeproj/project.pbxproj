@@ -58,6 +58,7 @@
 		C29489A81FFDD3C10090D41F /* KNCollectionFlowLayout */ = {
 			isa = PBXGroup;
 			children = (
+				C29489BF1FFDD78A0090D41F /* KNViews */,
 				C29489A91FFDD3C10090D41F /* AppDelegate.h */,
 				C29489AA1FFDD3C10090D41F /* AppDelegate.m */,
 				C29489AC1FFDD3C10090D41F /* ViewController.h */,
@@ -69,6 +70,13 @@
 				C29489B81FFDD3C10090D41F /* main.m */,
 			);
 			path = KNCollectionFlowLayout;
+			sourceTree = "<group>";
+		};
+		C29489BF1FFDD78A0090D41F /* KNViews */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = KNViews;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
