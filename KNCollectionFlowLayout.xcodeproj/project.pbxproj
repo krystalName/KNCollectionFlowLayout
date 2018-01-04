@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		39562FF4692111EFB0E0F1D8 /* libPods-KNCollectionFlowLayout.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 74EDD99BB71C668D7F38B9DD /* libPods-KNCollectionFlowLayout.a */; };
 		C29489AB1FFDD3C10090D41F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C29489AA1FFDD3C10090D41F /* AppDelegate.m */; };
 		C29489AE1FFDD3C10090D41F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C29489AD1FFDD3C10090D41F /* ViewController.m */; };
 		C29489B11FFDD3C10090D41F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C29489AF1FFDD3C10090D41F /* Main.storyboard */; };
@@ -16,6 +17,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4E722D27DC214CC78A439991 /* Pods-KNCollectionFlowLayout.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KNCollectionFlowLayout.release.xcconfig"; path = "Pods/Target Support Files/Pods-KNCollectionFlowLayout/Pods-KNCollectionFlowLayout.release.xcconfig"; sourceTree = "<group>"; };
+		74EDD99BB71C668D7F38B9DD /* libPods-KNCollectionFlowLayout.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-KNCollectionFlowLayout.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9E6D478357EDD1F62013EC2D /* Pods-KNCollectionFlowLayout.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KNCollectionFlowLayout.debug.xcconfig"; path = "Pods/Target Support Files/Pods-KNCollectionFlowLayout/Pods-KNCollectionFlowLayout.debug.xcconfig"; sourceTree = "<group>"; };
 		C29489A61FFDD3C10090D41F /* KNCollectionFlowLayout.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KNCollectionFlowLayout.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C29489A91FFDD3C10090D41F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		C29489AA1FFDD3C10090D41F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -33,17 +37,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				39562FF4692111EFB0E0F1D8 /* libPods-KNCollectionFlowLayout.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		55CF411D7869B5C42A736CFD /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9E6D478357EDD1F62013EC2D /* Pods-KNCollectionFlowLayout.debug.xcconfig */,
+				4E722D27DC214CC78A439991 /* Pods-KNCollectionFlowLayout.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		C294899D1FFDD3C10090D41F = {
 			isa = PBXGroup;
 			children = (
 				C29489A81FFDD3C10090D41F /* KNCollectionFlowLayout */,
 				C29489A71FFDD3C10090D41F /* Products */,
+				55CF411D7869B5C42A736CFD /* Pods */,
+				ECCC4DD6DF2E160430548B77 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -79,6 +95,14 @@
 			path = KNViews;
 			sourceTree = "<group>";
 		};
+		ECCC4DD6DF2E160430548B77 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				74EDD99BB71C668D7F38B9DD /* libPods-KNCollectionFlowLayout.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -86,9 +110,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C29489BC1FFDD3C10090D41F /* Build configuration list for PBXNativeTarget "KNCollectionFlowLayout" */;
 			buildPhases = (
+				4D6FBDEF1526EA7BA60DC359 /* [CP] Check Pods Manifest.lock */,
 				C29489A21FFDD3C10090D41F /* Sources */,
 				C29489A31FFDD3C10090D41F /* Frameworks */,
 				C29489A41FFDD3C10090D41F /* Resources */,
+				46D2A6FBDE418D16DFBA82E7 /* [CP] Embed Pods Frameworks */,
+				CD78F00B5CB69DAA7FD0926C /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -144,6 +171,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		46D2A6FBDE418D16DFBA82E7 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-KNCollectionFlowLayout/Pods-KNCollectionFlowLayout-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4D6FBDEF1526EA7BA60DC359 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		CD78F00B5CB69DAA7FD0926C /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-KNCollectionFlowLayout/Pods-KNCollectionFlowLayout-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		C29489A21FFDD3C10090D41F /* Sources */ = {
@@ -284,6 +359,7 @@
 		};
 		C29489BD1FFDD3C10090D41F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9E6D478357EDD1F62013EC2D /* Pods-KNCollectionFlowLayout.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -298,6 +374,7 @@
 		};
 		C29489BE1FFDD3C10090D41F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4E722D27DC214CC78A439991 /* Pods-KNCollectionFlowLayout.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
