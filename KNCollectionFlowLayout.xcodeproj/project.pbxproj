@@ -15,6 +15,7 @@
 		C29489B61FFDD3C10090D41F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C29489B41FFDD3C10090D41F /* LaunchScreen.storyboard */; };
 		C29489B91FFDD3C10090D41F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C29489B81FFDD3C10090D41F /* main.m */; };
 		C2B6E32B1FFF6439007C4709 /* KNCollectionFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = C2B6E32A1FFF6439007C4709 /* KNCollectionFlowLayout.m */; };
+		C2B6E32E1FFF685E007C4709 /* KNCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C2B6E32D1FFF685E007C4709 /* KNCollectionViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +34,8 @@
 		C29489B81FFDD3C10090D41F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		C2B6E3291FFF6439007C4709 /* KNCollectionFlowLayout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KNCollectionFlowLayout.h; sourceTree = "<group>"; };
 		C2B6E32A1FFF6439007C4709 /* KNCollectionFlowLayout.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KNCollectionFlowLayout.m; sourceTree = "<group>"; };
+		C2B6E32C1FFF685E007C4709 /* KNCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KNCollectionViewCell.h; sourceTree = "<group>"; };
+		C2B6E32D1FFF685E007C4709 /* KNCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KNCollectionViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +99,8 @@
 			children = (
 				C2B6E3291FFF6439007C4709 /* KNCollectionFlowLayout.h */,
 				C2B6E32A1FFF6439007C4709 /* KNCollectionFlowLayout.m */,
+				C2B6E32C1FFF685E007C4709 /* KNCollectionViewCell.h */,
+				C2B6E32D1FFF685E007C4709 /* KNCollectionViewCell.m */,
 			);
 			path = KNViews;
 			sourceTree = "<group>";
@@ -233,6 +238,7 @@
 				C29489AE1FFDD3C10090D41F /* ViewController.m in Sources */,
 				C29489B91FFDD3C10090D41F /* main.m in Sources */,
 				C2B6E32B1FFF6439007C4709 /* KNCollectionFlowLayout.m in Sources */,
+				C2B6E32E1FFF685E007C4709 /* KNCollectionViewCell.m in Sources */,
 				C29489AB1FFDD3C10090D41F /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
