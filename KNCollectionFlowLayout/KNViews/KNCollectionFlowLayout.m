@@ -7,10 +7,27 @@
 //
 
 #import "KNCollectionFlowLayout.h"
+#import "KNCollectionViewCell.h"
+
+
+@interface KNCollectionFlowLayout()
+
+@property(nonatomic, assign) NSInteger count;
+
+@end
+
 
 @implementation KNCollectionFlowLayout
 
 
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        self.itemSize = CGSizeMake(SCREEN_WIDTH, <#CGFloat height#>)
+    }
+    return self;
+}
 
 
 @end
