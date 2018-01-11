@@ -92,15 +92,15 @@
             if(row < current_floor){
                 attributes.zIndex = 7;
                 attributes.frame = CGRectMake(0, (HEADER_HEIGHT-DRAG_INTERVAL)+DRAG_INTERVAL*row, SCREEN_WIDTH, CELL_CURRHEIGHT);
-//                [self setEffectViewAlpha:1 forIndexPath:attributes.indexPath];
+                [self setEffectViewAlpha:1 forIndexPath:attributes.indexPath];
             }else if(row == current_floor){
                 attributes.zIndex = 8;
                 attributes.frame = CGRectMake(0, (HEADER_HEIGHT-DRAG_INTERVAL)+DRAG_INTERVAL*row, SCREEN_WIDTH, CELL_CURRHEIGHT);
-//                [self setEffectViewAlpha:1 forIndexPath:attributes.indexPath];
+                [self setEffectViewAlpha:1 forIndexPath:attributes.indexPath];
             }else if(row == current_floor+1){
                 attributes.zIndex = 9;
                 attributes.frame = CGRectMake(0, attributes.frame.origin.y+(current_floor-1)*offsetOfNextItem-riseOfCurrentItem*percent, SCREEN_WIDTH, CELL_HEIGHT+(CELL_CURRHEIGHT-CELL_HEIGHT)*percent);
-//                [self setEffectViewAlpha:percent forIndexPath:attributes.indexPath];
+                [self setEffectViewAlpha:percent forIndexPath:attributes.indexPath];
             }else{
                 if (row == current_floor+2) {
                     attributes.zIndex = 6;
@@ -119,7 +119,7 @@
                 }
                 
                 attributes.frame = CGRectMake(0, attributes.frame.origin.y+(current_floor-1)*offsetOfNextItem+offsetOfNextItem*percent, SCREEN_WIDTH, CELL_HEIGHT);
-//                [self setEffectViewAlpha:0 forIndexPath:attributes.indexPath];
+                [self setEffectViewAlpha:0 forIndexPath:attributes.indexPath];
             }
             
 //            [self setImageViewOfItem:(screen_y-attributes.frame.origin.y)/SCREEN_HEIGHT*IMAGEVIEW_MOVE_DISTANCE withIndexPath:attributes.indexPath];
@@ -131,7 +131,7 @@
         for(UICollectionViewLayoutAttributes *attributes in array){
             
             if(attributes.indexPath.row > 1){
-//                [self setEffectViewAlpha:0 forIndexPath:attributes.indexPath];
+                [self setEffectViewAlpha:0 forIndexPath:attributes.indexPath];
             }
 //            [self setImageViewOfItem:(screen_y-attributes.frame.origin.y)/screen_height*IMAGEVIEW_MOVE_DISTANCE withIndexPath:attributes.indexPath];
             
