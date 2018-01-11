@@ -23,4 +23,15 @@
 
 @interface KNCollectionViewCell : UICollectionViewCell
 
+
+
+@property(nonatomic, strong) UIImageView *imageView;
+@property(nonatomic, strong) UIView *maskView;
+@property(nonatomic, strong) UILabel *titleLabel;
+@property(nonatomic, strong) UILabel *descLabel;
+@property(nonatomic, strong) UILabel *bottomLabel;
+
+-(void)revisePositionAtFirstCell;
+-(void)setIndex:(NSUInteger)index;
+
 @end
