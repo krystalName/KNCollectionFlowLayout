@@ -7,7 +7,7 @@
 //
 
 #import "KNCollectionViewCell.h"
-#import <Masonry.h>
+
 
 @implementation KNCollectionViewCell
 

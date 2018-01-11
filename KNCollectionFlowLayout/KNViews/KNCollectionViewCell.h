@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import <Masonry.h>
 
 ///屏幕的宽高
 #define SCREEN_WIDTH ([[UIScreen mainScreen] bounds].size.width)

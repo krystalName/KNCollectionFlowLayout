@@ -142,4 +142,20 @@
 }
 
 
+-(void)setEffectViewAlpha:(CGFloat)percent forIndexPath:(NSIndexPath *)indexPath
+{
+    KNCollectionViewCell *cell = (KNCollectionViewCell *)[self.collectionView cellForItemAtIndexPath:indexPath];
+    
+    cell.maskView.alpha = MAX((1-percent)*0.6, 0);
+    
+    cell.titleLabel.layer.transform = CATransform3DMakeScale(0.8+0.2*percent, 0.8+0.2*percent, 1);
+    [cell.titleLabel mas_updateConstraints:^(MASConstraintMaker *make) {
+        CGFloat offset = MAX(25, 88*percent);
+        make.bottom.equalTo(cell.contentView.mas_bottom).offset(-offset);
+    }];
+    
+    cell.descLabel.alpha = percent;
+    cell.bottomLabel.alpha = percent;
+}
+
 @end
