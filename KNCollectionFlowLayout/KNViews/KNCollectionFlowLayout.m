@@ -122,7 +122,7 @@
                 [self setEffectViewAlpha:0 forIndexPath:attributes.indexPath];
             }
             
-//            [self setImageViewOfItem:(screen_y-attributes.frame.origin.y)/SCREEN_HEIGHT*IMAGEVIEW_MOVE_DISTANCE withIndexPath:attributes.indexPath];
+            [self setImageViewOfItem:(screen_y-attributes.frame.origin.y)/SCREEN_HEIGHT*IMAGEVIEW_MOVE_DISTANCE withIndexPath:attributes.indexPath];
             
         }
         
@@ -133,7 +133,7 @@
             if(attributes.indexPath.row > 1){
                 [self setEffectViewAlpha:0 forIndexPath:attributes.indexPath];
             }
-//            [self setImageViewOfItem:(screen_y-attributes.frame.origin.y)/screen_height*IMAGEVIEW_MOVE_DISTANCE withIndexPath:attributes.indexPath];
+            [self setImageViewOfItem:(screen_y-attributes.frame.origin.y)/SCREEN_HEIGHT*IMAGEVIEW_MOVE_DISTANCE withIndexPath:attributes.indexPath];
             
         }
     }
@@ -167,6 +167,68 @@
     
     cell.descLabel.alpha = percent;
     cell.bottomLabel.alpha = percent;
+}
+
+
+- (CGPoint)targetContentOffsetForProposedContentOffset:(CGPoint)proposedContentOffset withScrollingVelocity:(CGPoint)velocity
+{
+    CGPoint destination;
+    CGFloat positionY;
+    CGFloat screen_y = self.collectionView.contentOffset.y;
+    CGFloat cc;
+    CGFloat count;
+    
+    if (screen_y < 0) {
+        return proposedContentOffset;
+    }
+    if(velocity.y == 0){ //此情况可能由于拖拽不放手，停下时再放手的可能，所以加速度为0
+        count = roundf(((proposedContentOffset.y-HEADER_HEIGHT)/DRAG_INTERVAL))+1;
+        self.currentCount = count;
+        if(count == 0){
+            positionY = 0;
+        }else{
+            positionY = HEADER_HEIGHT+(count-1)*DRAG_INTERVAL;
+        }
+    }else{
+        if(velocity.y>1){
+            cc = 1;
+        }else if(velocity.y < -1){
+            cc = -1;
+        }else{
+            cc = velocity.y;
+        }
+        if (velocity.y > 0) {
+            count = ceilf(((screen_y + cc*DRAG_INTERVAL - HEADER_HEIGHT)/DRAG_INTERVAL))+1;
+        }else{
+            count = floorf(((screen_y + cc*DRAG_INTERVAL - HEADER_HEIGHT)/DRAG_INTERVAL))+1;
+        }
+        if(count == 0){
+            positionY = 0;
+            self.currentCount = 1;
+        }else{
+            if (velocity.y > 0) {
+                count = self.currentCount + 1;
+                self.currentCount++;
+            } else {
+                count = self.currentCount - 1;
+                self.currentCount --;
+            }
+            positionY = HEADER_HEIGHT+(count-1)*DRAG_INTERVAL;
+        }
+    }
+    
+    
+    if(positionY < 0){
+        positionY = 0;
+    }
+    if(positionY > self.collectionView.contentSize.height - [UIScreen mainScreen].bounds.size.height){
+        positionY = self.collectionView.contentSize.height - [UIScreen mainScreen].bounds.size.height;
+        self.currentCount --;
+        count = self.currentCount;
+    }
+    self.collectionView.decelerationRate = 0.1f;
+    destination = CGPointMake(0, positionY);
+    return destination;
 }
 
 @end
