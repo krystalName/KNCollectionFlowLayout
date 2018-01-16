@@ -7,6 +7,9 @@
 //
 
 #import "ViewController.h"
+#import "KNCollectionViewCell.h"
+#import "KNCollectionFlowLayout.h"
+
 
 @interface ViewController ()
 
