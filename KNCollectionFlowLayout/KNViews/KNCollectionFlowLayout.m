@@ -142,6 +142,17 @@
 }
 
 
+/**
+ *  设置CELL里imageView的位置偏移动画
+ */
+-(void)setImageViewOfItem:(CGFloat)distance withIndexPath:(NSIndexPath *)indexpath
+{
+    KNCollectionViewCell *cell = (KNCollectionViewCell *)[self.collectionView cellForItemAtIndexPath:indexpath];
+    cell.imageView.frame = CGRectMake(0, IMAGEVIEW_ORIGIN_Y + distance, SCREEN_WIDTH, cell.imageView.frame.size.height);
+}
+
+
+
 -(void)setEffectViewAlpha:(CGFloat)percent forIndexPath:(NSIndexPath *)indexPath
 {
     KNCollectionViewCell *cell = (KNCollectionViewCell *)[self.collectionView cellForItemAtIndexPath:indexPath];
