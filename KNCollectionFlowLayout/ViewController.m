@@ -11,7 +11,13 @@
 #import "KNCollectionFlowLayout.h"
 
 
-@interface ViewController ()
+@interface ViewController ()<UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout,UIViewControllerTransitioningDelegate>
+
+@property (nonatomic, strong) NSMutableArray *dataSourcesArray;
+
+@property (nonatomic, strong) UICollectionView *collectionView;
+@property (nonatomic, strong) KNCollectionFlowLayout *layout;
+@property (nonatomic, assign) NSInteger movieNumber;
 
 @end
 
