@@ -35,4 +35,34 @@
 }
 
 
+- (void)scrollViewDidScrollToTop:(UIScrollView *)scrollView {
+    self.layout.currentCount = 1;
+}
+
+
+#pragma mark - Init Views
+
+- (UICollectionView *)collectionView {
+    if (!_collectionView) {
+        // layout
+        KNCollectionFlowLayout *layout = [[KNCollectionFlowLayout alloc] init];
+        self.layout = layout;
+        
+        _collectionView = [[UICollectionView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT) collectionViewLayout:layout];
+        NSString *string = NSStringFromClass([KNCollectionViewCell class]);
+        [_collectionView registerClass:[KNCollectionViewCell class] forCellWithReuseIdentifier:string];
+        _collectionView.delegate = self;
+        _collectionView.dataSource = self;
+        _collectionView.bounces = NO;
+        _collectionView.backgroundColor = [UIColor whiteColor];
+        
+        if (@available(iOS 11.0, *)) {
+            _collectionView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
+        }
+    }
+    return _collectionView;
+}
+
+
+
 @end
