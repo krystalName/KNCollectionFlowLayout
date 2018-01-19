@@ -77,7 +77,13 @@
         cell.titleLabel.text = @"好看的海报";
         cell.descLabel.text = @"爱情 | 亲情";
         cell.bottomLabel.text = @"好看的外表千篇一律";
-        cell.imageView.image = [UIImage imageNamed:@"116"];
+        if (indexPath.row % 2 == 0) {
+            cell.imageView.image = [UIImage imageNamed:@"117"];
+        }else if(indexPath.row % 3 == 0){
+            cell.imageView.image = [UIImage imageNamed:@"115"];
+        }else{
+            cell.imageView.image = [UIImage imageNamed:@"116"];
+        }
     }
     return cell;
 }

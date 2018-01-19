@@ -19,6 +19,7 @@
         //根据当前CELL所在屏幕的不同位置，初始化IMAGEVIEW的相对位置，为了配合滚动时的IMAGEVIEW偏移动画
         //(screen_y-attributes.frame.origin.y)/568*80
         self.imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, IMAGEVIEW_ORIGIN_Y-self.frame.origin.y/SCREEN_HEIGHT*IMAGEVIEW_MOVE_DISTANCE, SCREEN_WIDTH, CELL_CURRHEIGHT)];
+        self.imageView.contentMode = UIViewContentModeScaleAspectFill;
         [self.contentView addSubview:self.imageView];
         
         self.maskView = [[UIView alloc] init];
