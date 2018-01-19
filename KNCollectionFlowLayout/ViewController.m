@@ -74,9 +74,9 @@
         if(indexPath.row == 1){
             [cell revisePositionAtFirstCell];
         }
-        cell.titleLabel.text = @"好看的海报";
+        cell.titleLabel.text = @"你以为是什么？";
         cell.descLabel.text = @"爱情 | 亲情";
-        cell.bottomLabel.text = @"好看的外表千篇一律";
+        cell.bottomLabel.text = @"还不是因为你懒？";
         if (indexPath.row % 2 == 0) {
             cell.imageView.image = [UIImage imageNamed:@"117"];
         }else if(indexPath.row % 3 == 0){
