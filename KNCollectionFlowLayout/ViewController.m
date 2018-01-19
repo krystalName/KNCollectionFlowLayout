@@ -25,13 +25,37 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+
+    ///添加试图
+    [self.view addSubview:self.collectionView];
+    
+    
+    [self confidDataSource];
+
 }
 
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+-(void)confidDataSource{
+    
+    self.dataSourcesArray = [NSMutableArray arrayWithCapacity:10];
+    
+    for (NSInteger i = 0 ; i< 10; i++) {
+        [self.dataSourcesArray addObject:@"占位用"];
+    }
+    
+    [self.layout setcontentSize:self.dataSourcesArray.count];
+    [self.collectionView reloadData];
+}
+
+#pragma mark -  处理代理
+
+- (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
+    return 1;
+}
+
+// 每个section中得items个数
+- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
+    return self.dataSourcesArray.count +1 ;
 }
 
 
