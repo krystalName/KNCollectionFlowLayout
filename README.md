@@ -5,3 +5,5 @@
 + 自行写了一个FlowLayout 实现这个滑动模式。 
 
 ### 现展示一张效果图
+
+![](https://github.com/krystalName/KNCollectionFlowLayout/blob/master/KNXiangnaier.gif)
